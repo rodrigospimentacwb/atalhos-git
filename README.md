@@ -1,69 +1,111 @@
-# atalhos-git
+# Atalhos úteis do Git
 
-//Git:
+- Clone:
 
--Clone
-git clone REPOSITORIO
+```git clone REPOSITORIO```
 
--Nova branch
-git checkout -b NOME_DA_BRANCH
+- Nova branch
 
--- Commit
+```git checkout -b NOME_DA_BRANCH```
+
+- Commit:
+
+```
 git add .
 git commit -m "MENSAGEM"
 git push -u origin NOME_DA_BRANCH
+```
 
--- Git Stash pilha de alterações antes e comitar
+- Git Stash pilha de alterações antes e comitar:
+
+```
 git stash // empilhar as alterações
 git stash pop // voltar o ultimo item da pilha
 git stash drop // Apaga da pilha
+```
 
--- Configuração local
+- Configuração local:
+
+```
 git config --local user.name "usuario"
 git config --local user.email "email"
+```
 
--- Reset
+- Reset:
+
+```
 git reset --hard
 git clean -fd
 git gc
+```
 
---cherry-pick
+- Cherry-Pick:
+
+```
 git log
 pegar o hash da versão do log
 criar uma nova branch
 usar o comando git cherry-pick 'HASH do commit'
+```
 
---Apagar branch local
+- Apagar branch local:
+
+```
 git branch -D 'nome da branch'
+```
 
---Sincronizar todos os repos locais com os do git
+- Sincronizar todos os repos locais com os do git:
+
+```
 git fetch --all
+```
 
---Rebase
+- Rebase:
+
+```
 ir para a master
 dar um git pull
 ir para sua branch
 dar um git rebase master
+```
 
---Git Amend (aproveitar o ultimo commit para correção: https://www.atlassian.com/br/git/tutorials/rewriting-history)
-git commit --amend 
+- Git Amend (aproveitar o ultimo commit para correção: 
+Ref: https://www.atlassian.com/br/git/tutorials/rewriting-history
 
---Voltar um commit (usar git hub desktop)
+```
+git commit --amend
+```
+
+- Voltar um commit:
+
+```
 git reset --hard HEAD^
+```
 
--- Atualizar a tags locais
+- Atualizar a tags locais:
+
+```
 git fetch --all --tags 
+```
 
--- Salvar as credenciais globais
+- Salvar as credenciais globais:
+
+```
 git config --global credential.helper store
+```
 
--- Corrigir 403 sem SSH
+- Corrigir 403 sem SSH:
+
+```
 mudar url do arquivo .git/config = https://github-username@github.com/github-username/github-repository-name.git
 ou via comando
 git remote set-url origin https://github-username@github.com/github-username/github-repository-name.git
+```
 
--- Git logs
+- Git logs:
+
 https://devhints.io/git-log
 
--- visualizing-git
+- Visualizing Git:
+
 http://git-school.github.io/visualizing-git/
