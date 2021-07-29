@@ -2,105 +2,110 @@
 
 - Clone:
 
-```git clone REPOSITORIO```
+  ```git clone REPOSITORIO```
 
 - Nova branch
 
-```git checkout -b NOME_DA_BRANCH```
+  ```git checkout -b NOME_DA_BRANCH```
 
 - Commit:
 
-```
-git add .
-git commit -m "MENSAGEM"
-git push -u origin NOME_DA_BRANCH
-```
+  ```
+  git add .
+  git commit -m "MENSAGEM"
+  git push -u origin NOME_DA_BRANCH
+  ```
 
 - Git Stash pilha de alterações antes e comitar:
 
-```
-git stash // empilhar as alterações
-git stash pop // voltar o ultimo item da pilha
-git stash drop // Apaga da pilha
-```
+  ```
+  git stash // empilhar as alterações
+  git stash pop // voltar o ultimo item da pilha
+  git stash drop // Apaga da pilha
+  ```
 
 - Configuração local:
 
-```
-git config --local user.name "usuario"
-git config --local user.email "email"
-```
+  ```
+  git config --local user.name "usuario"
+  git config --local user.email "email"
+  ```
 
 - Reset:
 
-```
-git reset --hard
-git clean -fd
-git gc
-```
+  ```
+  git reset --hard
+  git clean -fd
+  git gc
+  ```
+
+- Revert:
+
+  ```git revert -m 1 HASH_VERSAO_QUE_QUER_REVERTER```
+  * Obs: o valor '1' é a quantidade de commits que quer voltar a partir do hash informado
 
 - Cherry-Pick:
 
-```
-git log
-pegar o hash da versão do log
-criar uma nova branch
-usar o comando git cherry-pick 'HASH do commit'
-```
+    ```
+    git log
+    pegar o hash da versão do log
+    criar uma nova branch
+    usar o comando git cherry-pick 'HASH do commit'
+    ```
 
 - Apagar branch local:
 
-```
-git branch -D 'nome da branch'
-```
+  ```
+  git branch -D 'nome da branch'
+  ```
 
 - Sincronizar todos os repos locais com os do git:
 
-```
-git fetch --all
-```
+  ```
+  git fetch --all
+  ```
 
 - Rebase:
 
-```
-ir para a master
-dar um git pull
-ir para sua branch
-dar um git rebase master
-```
+  ```
+  ir para a master
+  dar um git pull
+  ir para sua branch
+  dar um git rebase master
+  ```
 
 - Git Amend (aproveitar o ultimo commit para correção: 
 Ref: https://www.atlassian.com/br/git/tutorials/rewriting-history
 
-```
-git commit --amend
-```
+  ```
+  git commit --amend
+  ```
 
 - Voltar um commit:
 
-```
-git reset --hard HEAD^
-```
+  ```
+  git reset --hard HEAD^
+  ```
 
 - Atualizar a tags locais:
 
-```
-git fetch --all --tags 
-```
+  ```
+  git fetch --all --tags 
+  ```
 
 - Salvar as credenciais globais:
 
-```
-git config --global credential.helper store
-```
+  ```
+  git config --global credential.helper store
+  ```
 
 - Corrigir 403 sem SSH:
 
-```
-mudar url do arquivo .git/config = https://github-username@github.com/github-username/github-repository-name.git
-ou via comando
-git remote set-url origin https://github-username@github.com/github-username/github-repository-name.git
-```
+  ```
+  mudar url do arquivo .git/config = https://github-username@github.com/github-username/github-repository-name.git
+  ou via comando
+  git remote set-url origin https://github-username@github.com/github-username/github-repository-name.git
+  ```
 
 - Git logs:
 
